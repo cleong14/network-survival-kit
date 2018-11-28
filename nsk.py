@@ -17,6 +17,7 @@ if __name__ == '__main__':
   parser_maclookup = subparsers.add_parser('maclookup', help='Perform mac address lookup')
   parser_maclookup.add_argument('mac', nargs=1, help='Target mac address')
   parser_maclookup.add_argument('--output', '-O', nargs=1, default=0, help='Write output to text file')
+  parser_maclookup.add_argument('--timer', '-T', action='store_true', help='Total elapsed runtime of module')
   parser_maclookup.set_defaults(func=maclookup)
 
   args = parser.parse_args()

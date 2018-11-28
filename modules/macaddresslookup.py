@@ -1,8 +1,15 @@
 import urllib.request as urllib2
 import json
 import codecs
+import time
 
 def maclookup(maclookup_args):
+  if maclookup_args.timer == True:
+    # start timer
+    start_time = time.time()
+
+    print('Timer started...\n')
+  
   print('MACLOOKUP ARGS', maclookup_args)
   # API URL
   url = 'https://macvendors.co/api/'
@@ -30,8 +37,19 @@ def maclookup(maclookup_args):
   # Print company address
   print(company_address)
 
+  if maclookup_args.timer == True:
+    # total elapsed runtime
+    elapsed_time = time.time() - start_time
+    formatted_time = "{:.2f}".format(elapsed_time)
+
+    print('Timer finished...\n')
+    print('ELAPSED TIME', formatted_time)
+
   if maclookup_args.output != 0:
     output_text = '\n\n====================\n\n' + company_mac + '\n' + company_name + '\n' + company_address
+
+    if maclookup_args.timer == True:
+      output_text = '\n\n====================\n\n' + company_mac + '\n' + company_name + '\n' + company_address + '\n\n' + 'Total elapsed runtime: ' + str(formatted_time) + ' ms'
 
     output_file = open(maclookup_args.output[0], 'a+')
 

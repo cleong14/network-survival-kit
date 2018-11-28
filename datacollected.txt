@@ -1,7 +1,21 @@
+====================
 
+Company MAC: 08:00:27:f6:17:b6
+Company name: Cadmus Computer Systems
+Company address: 600 Suffold St,Lowell  MA  01854,US
 
 ====================
 
 Company MAC: 08:00:27:f6:17:b6
 Company name: Cadmus Computer Systems
 Company address: 600 Suffold St,Lowell  MA  01854,US
+
+Total elapsed runtime: 0.28 ms
+
+====================
+
+Company MAC: 08:00:27:f6:17:b6
+Company name: Cadmus Computer Systems
+Company address: 600 Suffold St,Lowell  MA  01854,US
+
+Total elapsed runtime: 0.31 ms
